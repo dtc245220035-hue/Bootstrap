@@ -1,0 +1,15 @@
+﻿.grid-container-wrapper {
+    @include absolute-wrapper;
+}
+
+.grid-container {
+    // Style cho container nếu cần
+}
+
+.grid-wrapper {
+    @include wrapper-style;
+
+    &--first {
+        height: $grid-height-small;
+    }
+}

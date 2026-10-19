@@ -1,0 +1,20 @@
+﻿.grid-content {
+    @include grid-item($grid-item-width);
+
+    &--full {
+        width: 100%;
+        border-right-color: transparent;
+    }
+
+    &--half {
+        width: 50%;
+    }
+
+    &--purple {
+        background-color: $color-purple;
+    }
+
+    &--green {
+        background-color: $color-green;
+    }
+}

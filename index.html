@@ -1,65 +1,23 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phân tích cấu trúc Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Responsive Grid - SASS Refactor</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container header-inner">
-            <h1 class="logo">TechNews</h1>
-            <div class="header-right">
-                <input type="text" placeholder="Tìm kiếm...">
-                <button>Đăng nhập</button>
+    <div class="grid-container-wrapper">
+        <div class="grid-container">
+            <div class="grid-wrapper grid-wrapper--first">
+                <div class="grid-content grid-content--full grid-content--purple"></div>
             </div>
+            <div class="grid-wrapper">
+                <div class="grid-content grid-content--half grid-content--green"></div>
+                <div class="grid-content grid-content--half grid-content--green"></div>
+            </div>
+            <!-- Thêm các hàng grid khác tương tự nếu cần -->
         </div>
-    </header>
-
-    <!-- NAVIGATION MENU (4 mục) -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-links">
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Công nghệ</a></li>
-                <li><a href="#">Đánh giá</a></li>
-                <li><a href="#">Sự kiện</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- CONTENT SECTION -->
-    <main class="container main-content">
-        <!-- Cột nội dung chính -->
-        <section class="content-area">
-            <h2>Bài viết nổi bật</h2>
-            <article class="post">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hình ảnh bài viết">
-                <h3>Xu hướng phát triển Web năm 2026</h3>
-                <p>Đây là đoạn văn bản mô tả ngắn gọn về nội dung của bài viết. Bố cục trang web cần được tối ưu hóa để hiển thị tốt trên cả máy tính và điện thoại...</p>
-            </article>
-        </section>
-
-        <!-- Cột Sidebar -->
-        <aside class="sidebar">
-            <h2>Tin liên quan</h2>
-            <ul>
-                <li><a href="#">Top 10 ngôn ngữ lập trình phổ biến</a></li>
-                <li><a href="#">Cách tối ưu hóa CSS cho người mới</a></li>
-                <li><a href="#">Đánh giá chip AI thế hệ mới</a></li>
-            </ul>
-        </aside>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 TechNews. Bản quyền thuộc về tác giả.</p>
-        </div>
-    </footer>
-
+    </div>
 </body>
 </html>

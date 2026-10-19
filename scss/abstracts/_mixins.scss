@@ -1,0 +1,22 @@
+﻿@mixin grid-item($width, $bg-color: $color-light-gray, $border-color: $color-border) {
+    width: $width;
+    margin: 0;
+    border-right: $border-width solid $border-color;
+    height: 100%;
+    float: left;
+    background-color: $bg-color;
+}
+
+@mixin wrapper-style($height: $grid-height) {
+    overflow: auto;
+    position: relative;
+    height: $height;
+}
+
+@mixin absolute-wrapper {
+    position: $wrapper-position;
+    opacity: $wrapper-opacity;
+    width: auto;
+    left: $wrapper-left;
+    right: $wrapper-right;
+}
