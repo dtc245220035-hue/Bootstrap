@@ -1,23 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="vi">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Grid - SASS Refactor</title>
+    <title>Landing Page - SASS Refactor</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <div class="grid-container-wrapper">
-        <div class="grid-container">
-            <div class="grid-wrapper grid-wrapper--first">
-                <div class="grid-content grid-content--full grid-content--purple"></div>
-            </div>
-            <div class="grid-wrapper">
-                <div class="grid-content grid-content--half grid-content--green"></div>
-                <div class="grid-content grid-content--half grid-content--green"></div>
-            </div>
-            <!-- Thêm các hàng grid khác tương tự nếu cần -->
+    <!-- 1. Header & Nav -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="header__logo">TechBrand</a>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <!-- 2. Sản phẩm nổi bật -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Sản phẩm nổi bật</h2>
+            <div class="products__grid">
+                <div class="product-card">
+                    <div class="product-card__img" style="background: #e3f2fd;"></div>
+                    <h3 class="product-card__title">Sản phẩm 1</h3>
+                    <p class="product-card__price">1.000.000đ</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img" style="background: #fce4ec;"></div>
+                    <h3 class="product-card__title">Sản phẩm 2</h3>
+                    <p class="product-card__price">2.000.000đ</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img" style="background: #e8f5e9;"></div>
+                    <h3 class="product-card__title">Sản phẩm 3</h3>
+                    <p class="product-card__price">3.000.000đ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Số liệu thống kê -->
+    <section class="stats">
+        <div class="container stats__grid">
+            <div class="stat-item">
+                <span class="stat-item__number">500+</span>
+                <span class="stat-item__label">Khách hàng</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-item__number">100+</span>
+                <span class="stat-item__label">Dự án</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-item__number">50+</span>
+                <span class="stat-item__label">Giải thưởng</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">&copy; 2026 TechBrand. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

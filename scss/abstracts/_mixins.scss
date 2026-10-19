@@ -1,22 +1,19 @@
-﻿@mixin grid-item($width, $bg-color: $color-light-gray, $border-color: $color-border) {
-    width: $width;
-    margin: 0;
-    border-right: $border-width solid $border-color;
-    height: 100%;
-    float: left;
-    background-color: $bg-color;
+﻿@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin wrapper-style($height: $grid-height) {
-    overflow: auto;
-    position: relative;
-    height: $height;
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@mixin absolute-wrapper {
-    position: $wrapper-position;
-    opacity: $wrapper-opacity;
-    width: auto;
-    left: $wrapper-left;
-    right: $wrapper-right;
+@mixin card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
 }
