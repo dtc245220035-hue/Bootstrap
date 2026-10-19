@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký Người Dùng</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        /* Chỉ dùng 1 chút CSS để ép ảnh Carousel phủ kín chiều cao */
+        .carousel-item img {
+            object-fit: cover;
+            height: 100vh; /* Cao bằng màn hình */
+        }
+        /* Chỉnh lại chiều cao vùng form cho cân đối */
+        .form-section {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            
+            <!-- ================= CỘT TRÁI: CAROUSEL ================= -->
+            <!-- d-none d-lg-block: Ẩn trên mobile, chỉ hiện trên màn hình lớn -->
+            <div class="col-lg-7 d-none d-lg-block">
+                <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+                    </div>
+                    
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Lợi ích 1">
+                            <div class="carousel-caption d-none d-md-block text-start mb-5">
+                                <h2 class="fw-bold display-5">Kết nối không giới hạn</h2>
+                                <p class="fs-4">Tham gia cùng hàng ngàn doanh nghiệp khác để phát triển.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Lợi ích 2">
+                            <div class="carousel-caption d-none d-md-block text-start mb-5">
+                                <h2 class="fw-bold display-5">Giải pháp tối ưu</h2>
+                                <p class="fs-4">Công cụ mạnh mẽ giúp tăng năng suất làm việc của bạn.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Lợi ích 3">
+                            <div class="carousel-caption d-none d-md-block text-start mb-5">
+                                <h2 class="fw-bold display-5">Hỗ trợ 24/7</h2>
+                                <p class="fs-4">Đội ngũ kỹ thuật luôn túc trực để giải đáp mọi thắc mắc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================= CỘT PHẢI: FORM ĐĂNG KÝ ================= -->
+            <div class="col-lg-5 d-flex align-items-center justify-content-center form-section p-4 p-md-5 bg-white">
+                <div class="w-100" style="max-width: 450px;">
+                    
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold text-primary mb-2">Tạo Tài Khoản</h2>
+                        <p class="text-muted">Điền thông tin bên dưới để bắt đầu trải nghiệm.</p>
+                    </div>
+
+                    <form action="#" method="POST">
+                        
+                        <!-- Họ tên -->
+                        <div class="mb-4">
+                            <label for="fullname" class="form-label fw-semibold">Họ và Tên</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-user text-muted"></i></span>
+                                <input type="text" class="form-control form-control-lg" id="fullname" placeholder="Nguyễn Văn A" required>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label for="email" class="form-label fw-semibold">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-envelope text-muted"></i></span>
+                                <input type="email" class="form-control form-control-lg" id="email" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Mật khẩu -->
+                        <div class="mb-4">
+                            <label for="password" class="form-label fw-semibold">Mật khẩu</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-lock text-muted"></i></span>
+                                <input type="password" class="form-control form-control-lg" id="password" placeholder="Nhập mật khẩu" required>
+                            </div>
+                        </div>
+
+                        <!-- Xác nhận mật khẩu -->
+                        <div class="mb-4">
+                            <label for="confirm_password" class="form-label fw-semibold">Xác nhận mật khẩu</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-lock text-muted"></i></span>
+                                <input type="password" class="form-control form-control-lg" id="confirm_password" placeholder="Nhập lại mật khẩu" required>
+                            </div>
+                        </div>
+
+                        <!-- Điều khoản -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="terms" required>
+                            <label class="form-check-label text-muted" for="terms">
+                                Tôi đồng ý với <a href="#" class="text-decoration-none">Điều khoản dịch vụ</a> và <a href="#" class="text-decoration-none">Chính sách bảo mật</a>.
+                            </label>
+                        </div>
+
+                        <!-- Nút Đăng ký -->
+                        <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm mb-3">
+                            Đăng Ký Ngay
+                        </button>
+                        
+                        <p class="text-center text-muted mt-3">
+                            Đã có tài khoản? <a href="#" class="text-decoration-none fw-semibold">Đăng nhập</a>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
