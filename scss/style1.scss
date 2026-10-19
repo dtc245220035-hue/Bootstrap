@@ -1,0 +1,17 @@
+﻿// File 1: Biến và Nesting
+$primary-color: #3498db;
+$text-color: #333;
+
+body {
+    color: $text-color;
+    font-family: Arial, sans-serif;
+
+    .header {
+        background: $primary-color;
+        padding: 20px;
+        
+        h1 {
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+﻿// File 2: Mixin
+@mixin button-style($bg) {
+    background: $bg;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    @include button-style(#e74c3c);
+}

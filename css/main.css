@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.header__nav ul a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.header__nav ul a:hover {
+  color: #007bff;
+}
+
+.products {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.product-card__img {
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.product-card__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.product-card__price {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.stats {
+  background: #007bff;
+  padding: 50px 0;
+  color: white;
+}
+.stats__grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-item__number {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.stat-item__label {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+}
+.footer__copyright {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=main.css.map */
